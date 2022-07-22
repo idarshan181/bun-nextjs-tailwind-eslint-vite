@@ -1,9 +1,11 @@
-import Head from "next/head";
-import React from "react";
-import styles from "../styles/Home.module.css";
-import nextPackage from "next/package.json";
+import { NextPage } from 'next';
+import Head from 'next/head';
+import nextPackage from 'next/package.json';
+import React from 'react';
 
-export default function Home({}) {
+import styles from '../styles/Home.module.css';
+
+const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
@@ -19,10 +21,12 @@ export default function Home({}) {
         </h1>
 
         <p className={styles.description}>
-          Get started by editing{" "}
+          Get started by editing{' '}
           <code className={styles.code}>pages/index.tsx</code>
         </p>
       </main>
     </div>
   );
 }
+
+export default Home;
